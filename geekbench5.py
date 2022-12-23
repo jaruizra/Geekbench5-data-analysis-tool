@@ -75,18 +75,16 @@ try:
                     if str(option2) == str(1):
                         print("")
                         test_1.print_important_analysis()
-                        exit = True
                         exit2 = True
                     elif str(option2) == str(2):
                         print("")
-                        exit = True
                         exit2 = True
                     elif type("") == type(option2):
                         try:
                             u = get_url(option2)
                             test_2 = analysis.tests(u)
-
                             test_1.print_compare(test_2)
+                            exit2 = True
                         except requests.exceptions.MissingSchema:
                             print("Given url is not valid")
                             print("")
@@ -96,8 +94,10 @@ try:
         else:
             print(" -- The selected option is not available -- ")
             print("")
+    input()
 except KeyboardInterrupt:
     print("")
     print(" --- The user force the program exit --- ")
     print(" --- Good buy :), see you next time --- ")
     print("")
+    input()
