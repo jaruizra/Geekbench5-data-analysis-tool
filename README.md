@@ -3,14 +3,16 @@ This program is a python script that given a valid geekbench 5 test URL it will 
 
 For it to work just download python3 on your computer and double click the geekbench5.py program.
 
-I have created a python script that can get more info out of a given geekbench5 test compared to the official geekbench5 page. For some reason, the official page doesn’t
-show the test frequencies and that really bothered me because the data was in the test files, and accessing that test file every time was time consuming, so I made a
-python script that makes it easy for everyone.
+I have created a python script that can get more info out of a given geekbench5 test compared to the official geekbench5 page. For some reason, the official page doesn’t show the test frequencies and that really bothered me because the data was in the test files, and accessing that test file every time was time consuming, so I made a python script that makes it easy for everyone.
 
 ![Captura de pantalla 2022-12-23 210118](https://user-images.githubusercontent.com/121313957/209400963-6bef795b-ef2d-416a-ae7d-722532f7d494.png)
 
 
 It works by when given the url sending a request of the data of that test to the geekbench5 page, then it analyze that data and shows you the results.
+Just copy the link to a given test url like this one:
+
+![Captura de pantalla_20221223_210838](https://user-images.githubusercontent.com/121313957/209401492-d6a0abc1-4683-4648-8e2e-2fcd02175e95.png)
+
 
 You can press ctr+c to get out of the script at any given time, and there are menus that tell you what options you have.
 
