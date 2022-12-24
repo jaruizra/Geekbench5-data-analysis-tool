@@ -15,7 +15,7 @@ For it to work just download python3 on your computer and double click the geekb
 # Usage
 You will need to import some python modules, for that you will need to type on your pc terminal after installing python:
 
-     pip3 install Beautifulsoup
+     pip3 install beautifulsoup4
      pip3 install requests
      pip3 install requests.exceptions
      pip3 install json
