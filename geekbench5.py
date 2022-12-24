@@ -1,13 +1,8 @@
 import json
-
 import requests.exceptions
-
 import analysis
 import requests
 from bs4 import BeautifulSoup
-
-id = 1
-benchmarks = {}
 
 
 def menu():
