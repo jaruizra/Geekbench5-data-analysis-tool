@@ -7,6 +7,11 @@ I have created a python script that can get more info out of a given geekbench5 
 
 ![Captura de pantalla 2022-12-23 210118](https://user-images.githubusercontent.com/121313957/209400963-6bef795b-ef2d-416a-ae7d-722532f7d494.png)
 
+# Usage
+You will need to import some python modules, for that you will need to type on your pc terminal:
+
+     pip3 install beautifulsoup4
+     pip3 install requests
 
 It works by when given the url sending a request of the data of that test to the geekbench5 page, then it analyze that data and shows you the results.
 Just copy the link to a given test url like this one:
