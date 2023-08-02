@@ -13,12 +13,10 @@ In this link you can find the official beginner guide to installing python, it i
 For it to work just download python3 on your computer and double click the geekbench5.py program.
 
 # Usage
-You will need to import some python modules, for that you will need to type on your pc terminal after installing python:
+You will need to import some python libraries, for that you will need to type on your pc terminal after installing python:
 
      pip3 install beautifulsoup4
      pip3 install requests
-     pip3 install requests.exceptions
-     pip3 install json
 
 (If pip3 doesnt work try doing the same but with pip, it will depend of the version of python that you use.)
 
