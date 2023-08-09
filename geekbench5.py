@@ -22,9 +22,15 @@ def get_option():
 
 def get_url(url):
     t = url
-    url = t + ".gb5"
+    url = t + ".gb6"
     with requests.Session() as session:
         page = session.get("https://browser.geekbench.com/session/new")
+        for cookie in page.cookies:
+            print("cookie domain = " + cookie.domain)
+            print("cookie domain = " + cookie.name)
+            print("cookie domain = " + cookie.value)
+            print("----------------------------------------")
+            
         html = BeautifulSoup(page.content, "html.parser")
         csrf_token = html.find("input", {"name": "authenticity_token"})["value"]
         data_to_login = {'utf8': "✓",
@@ -34,7 +40,17 @@ def get_url(url):
                          "commit": "Log in"
                          }
         r = session.post("https://browser.geekbench.com/session/create", data_to_login)
+        for cookie in r.cookies:
+            print("cookie domain r = " + cookie.domain)
+            print("cookie domain r = " + cookie.name)
+            print("cookie domain r = " + cookie.value)
+            print("----------------------------------------")
         t = session.get(url)
+        for cookie in t.cookies:
+            print("cookie domain t = " + cookie.domain)
+            print("cookie domain t = " + cookie.name)
+            print("cookie domain t = " + cookie.value)
+            print("----------------------------------------")
         dict = json.loads(t.text)
 
     return dict
