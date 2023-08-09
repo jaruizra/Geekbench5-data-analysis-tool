@@ -2,6 +2,7 @@ class tests:
     def __init__(self, test):
         d = test
         d_m = d["metrics"]
+        self.d_m = d["metrics"]
         self.model = d_m[4 - 1]["value"]
         self.date = d["date"][0:10]
         self.frequency = d["processor_frequency"]["frequencies"]
@@ -14,7 +15,41 @@ class tests:
         d_s = d["sections"]
         self.s_score = d_s[1 - 1]["score"]
         self.m_score = d_s[2 - 1]["score"]
+        'self.prime_min_freq = int(self.find_data("Processor Frequency")["ivalue"])/1000000000'
+        self.prime_min_freq = int(self.find_data("64")["ivalue"])/1000000000
+        'print(self.prime_min_freq)'
+        self.prime_max_freq = self.prime_max_freq()
 
+        
+        
+        
+    def find_data(self, var_name):
+        name = var_name
+        exit = False
+        index = 0
+        while not exit:
+            'donde "id" antes ponia name'
+            if self.d_m[index]["id"] == int(name):
+                data = self.d_m[index]
+                exit = True
+                return data
+            else:
+                index += 1
+                
+    def prime_max_freq(self):
+        '''o = self.find_data("Cluster Count")
+        n = int(o["value"])
+        cluster = "Cluster " + str(n) + " Maximum Frequency"
+        print(cluster)
+        d = self.find_data(cluster)
+        max = int(d["ivalue"])/1000000000
+        print(max)
+        return max'''
+        o = self.find_data("59")
+        max = int(o["ivalue"])/1000000000
+        return max
+    
+        
     def harware_description(self):
         print("--- device hardware ---")
         print("CPU name =", self.cpu)
